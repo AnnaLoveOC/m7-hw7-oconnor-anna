@@ -147,6 +147,10 @@ section.hero > .call-to-action {
   margin: 0;
 }
 
+/* ===============================
+BUTTON TRANSITION
+================================ */
+
 section.hero > button {
   background-color: var(--secondary-color);
   border: none;
@@ -154,7 +158,22 @@ section.hero > button {
   border-radius: 12px;
   text-transform: uppercase;
   cursor: pointer;
+  
+  transition: 
+    background-color 0.2s ease;
+    transform 0.2s ease;
+    transform-origin: center;
 }
+
+section.hero > button:hover {
+  background-color: var(--warn-color);
+  transform: scale(1.025);
+}
+
+/* ===============================
+END BUTTON TRANSITION
+================================ */
+
 
 main article {
   padding: 48px 96px;
