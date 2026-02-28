@@ -52,7 +52,9 @@ header a {
   /* end base/static styles */
 
   /* transition properties */
-  transition: 0.3s ease;
+  transition: 
+    color 0.3s ease,
+    transform 0.3s ease;
 }
 
 header a:hover {
@@ -96,11 +98,27 @@ header a:hover::after {
 END HEADER LINKS TRANSITIONS AND ANIMATIONS
 ================================ */
 
-/* article link transitions */
+/* ===============================
+ARTICLE LINK TRANSITIONS
+================================ */
 main a {
   color: var(--danger-color);
+  padding: 4px;
+  border-radius: 4px;
+  
+  transition: 
+    color 0.2s ease,
+    background-color 0.25s ease;
 }
-/* end article link transitions */
+
+main a:hover {
+  color: var(--white);
+  background-color: var(--danger-color);
+  text-decoration: none;
+}
+/* ===============================
+END ARTICLE LINK TRANSITIONS
+================================ */
 
 main > article, nav{
   max-width: 1200px;
@@ -160,9 +178,9 @@ section.hero > button {
   cursor: pointer;
   
   transition: 
-    background-color 0.2s ease;
+    background-color 0.2s ease,
     transform 0.2s ease;
-    transform-origin: center;
+  transform-origin: center;
 }
 
 section.hero > button:hover {
@@ -199,4 +217,13 @@ footer {
   text-transform: uppercase;
   padding: 24px 0;
   color: var(--off-white);
+}
+
+/* Accessibiltity (Just to get used to this for real website times) */
+
+@media (prefers-reduced-motion: reduce) {
+ * {
+   animation: none;
+   transition: none;
+ }
 }
